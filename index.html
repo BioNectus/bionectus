@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bionectus - Bio Environmental Conservation Organization">
+    <meta name="author" content="Bionectus">
+    <meta name="keywords" content="environment, conservation, sustainability, wildlife protection, volunteer">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bionectus - Environmental Conservation">
+    <meta property="og:description" content="Bionectus works towards preserving ecosystems and wildlife for a sustainable future.">
+    <meta property="og:image" content="hero-image.jpg">
+    <meta property="og:url" content="https://www.bionectus.org">
+    <title>Bionectus | Environmental Conservation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">Bionectus</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#mission">Our Mission</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#getinvolved">Get Involved</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Parallax Effect -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Protecting Our Planet, Restoring Our Future</h1>
+            <p>Join us in preserving the Earth’s ecosystems and creating a sustainable future for generations to come.</p>
+            <a href="#about" class="cta-btn">Learn More About Us</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-us">
+        <div class="container">
+            <h2>About Bionectus</h2>
+            <p>Bionectus is a global organization committed to conserving the Earth's biodiversity through innovative programs and active community engagement. Our mission is to restore balance to ecosystems while promoting sustainable development and environmental education.</p>
+            <a href="#mission" class="cta-btn">Our Mission</a>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section id="mission" class="mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>Our mission is to protect diverse ecosystems, promote environmental sustainability, and educate communities about the importance of conserving the planet's natural resources.</p>
+            <ul class="mission-values">
+                <li><strong>Sustainability</strong> - Ensuring that future generations can thrive.</li>
+                <li><strong>Collaboration</strong> - Working together for a shared vision.</li>
+                <li><strong>Innovation</strong> - Using technology and new ideas to drive change.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Programs Section with Slider -->
+    <section id="programs" class="programs">
+        <div class="container">
+            <h2>Our Conservation Programs</h2>
+            <div class="slider">
+                <div class="slide">
+                    <h3>Forest Restoration</h3>
+                    <p>Replanting deforested areas and rehabilitating ecosystems.</p>
+                </div>
+                <div class="slide">
+                    <h3>Wildlife Protection</h3>
+                    <p>Protecting endangered species through habitat preservation and anti-poaching efforts.</p>
+                </div>
+                <div class="slide">
+                    <h3>Sustainable Energy</h3>
+                    <p>Promoting renewable energy sources to reduce carbon emissions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section id="getinvolved" class="get-involved">
+        <div class="container">
+            <h2>Get Involved</h2>
+            <p>Join us in making a positive impact. Whether you want to volunteer, donate, or partner with us, your support can make a difference!</p>
+            <div class="involved-options">
+                <div class="option">
+                    <h3>Volunteer</h3>
+                    <p>Contribute your time and skills to our various programs.</p>
+                </div>
+                <div class="option">
+                    <h3>Donate</h3>
+                    <p>Your donations help fund critical conservation projects worldwide.</p>
+                    <button id="donate-btn" class="cta-btn">Donate Now</button>
+                </div>
+                <div class="option">
+                    <h3>Partnerships</h3>
+                    <p>Partner with us to maximize impact and reach a broader audience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Modal -->
+    <div id="donation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Support Our Cause</h3>
+            <form id="donation-form">
+                <label for="amount">Donation Amount:</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+                <button type="submit">Donate</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form" action="/submit-form" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Your Email">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Bionectus. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://facebook.com/bionectus" target="_blank">Facebook</a>
+                <a href="https://twitter.com/bionectus" target="_blank">Twitter</a>
+                <a href="https://instagram.com/bionectus" target="_blank">Instagram</a>
+                <a href="https://linkedin.com/company/bionectus" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
