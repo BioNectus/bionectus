@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Bionectus</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        main h2 {
+            color: #004d40;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        form {
+            margin-top: 30px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1.1em;
+            color: #333;
+        }
+        button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #004d40;
+        }
+        .contact-info {
+            margin-top: 40px;
+            font-size: 1.1em;
+        }
+        .contact-info h3 {
+            color: #004d40;
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            margin: 8px 0;
+        }
+        footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 40px;
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            main {
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Contact Us</h1>
+        <p>We're here to assist you. Reach out to us with any questions or inquiries!</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Get in Touch</h2>
+        <p>If you have any questions or feedback, please feel free to contact us using the form below. We aim to respond within 48 hours during business days.</p>
+
+        <!-- Contact Form -->
+        <form action="#" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter the subject of your message" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Enter your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h3>Our Contact Information</h3>
+            <p><strong>Email:</strong> [bionectuseco@gmail.com]</p>
+            <p><strong>Phone:</strong> +91 [NA]</p>
+            <p><strong>Address:</strong> Ward No. 5, Devidayal Marg, Lodipur, Zarnania Kasba, Distt. Ghazipur, Uttar Pradesh</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bionectus. All Rights Reserved. | <a href="index.html">Back to Home</a></p>
+    </footer>
+</body>
+</html>
