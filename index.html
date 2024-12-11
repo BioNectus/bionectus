@@ -38,14 +38,26 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(135deg, #1D2B64, #00B8B8); /* Replaced yellow with soft teal */
             color: #ffffff;
             position: relative;
             padding: 50px;
+            z-index: 2; /* Ensures text is above the video */
         }
+
+        /* Full-screen video background */
+        header video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Keeps video behind content */
+        }
+
         header h1 {
             font-size: 4rem;
-            background: linear-gradient(90deg, #9C27B0, #FF4081);
+            background: linear-gradient(90deg, #8A2BE2, #00BFFF); /* Gradient from Magenta (Purple) to Blue */
             -webkit-background-clip: text;
             color: transparent;
             text-transform: uppercase;
@@ -60,7 +72,7 @@
         header .cta {
             padding: 15px 40px;
             font-size: 1.2rem;
-            background: #FF4081;
+            background: linear-gradient(90deg, #8A2BE2, #00BFFF); /* Gradient button color */
             border-radius: 50px;
             color: #fff;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -88,94 +100,80 @@
             gap: 30px;
             justify-content: center;
         }
-        .objectives .card {
-            background: #f7f7f7;
-            padding: 25px;
+        .card {
+            background-color: #f9f9f9;
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .objectives .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        .objectives .card h3 {
-            font-size: 1.6rem;
+        .card h3 {
             color: #1D2B64;
             margin-bottom: 15px;
-        }
-        .objectives .card p {
-            font-size: 1rem;
-            color: #666;
-        }
-
-        /* Footer */
-        footer {
-            background: #2D2D2D;
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            font-size: 1rem;
-        }
-
-        /* Social Media Section */
-        #social-media {
-            padding: 60px 20px;
-            background: #00B8B8; /* Soft teal color */
-            text-align: center;
-        }
-        #social-media h2 {
-            font-size: 2rem;
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
-        #social-media p {
-            font-size: 1.2rem;
-            color: #ffffff;
-            margin-bottom: 30px;
-        }
-        #social-media a {
-            color: #ffffff;
             font-size: 1.8rem;
-            padding: 10px;
-            transition: color 0.3s;
         }
-        #social-media a:hover {
-            color: #FF4081;
+        .card p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 50px;
+        }
+        footer p {
+            margin-bottom: 10px;
+        }
+        footer a {
+            color: #ffffff;
+            font-weight: bold;
+            margin: 5px;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #8A2BE2; /* Magenta hover effect */
+        }
+        footer .footer-links {
+            margin-top: 20px;
         }
 
         /* Donation Section */
         .donation-section {
-            padding: 60px 20px;
-            background: #1D2B64; /* Dark blue for donation section */
+            padding: 80px 20px;
+            background: linear-gradient(90deg, #8A2BE2, #00BFFF); /* Gradient background */
+            color: #fff;
             text-align: center;
-            color: white;
-        }
-        .donation-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        .donation-section p {
-            font-size: 1.4rem;
-            margin-bottom: 30px;
         }
         .donate-btn {
             padding: 15px 40px;
-            font-size: 1.2rem;
-            background: #FF4081;
+            background-color: #00BFFF;
             border-radius: 50px;
             color: white;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
         }
         .donate-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+            background-color: #8A2BE2; /* Magenta hover effect */
         }
     </style>
 </head>
 <body>
     <!-- Hero Section -->
     <header>
+        <video autoplay muted loop>
+            <source src="https://videos.pexels.com/video-files/1448735/1448735-uhd_4096_2160_24fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <h1>Bionectus</h1>
         <p>Empowering Nature and Sustainability for a Greener Future</p>
         <a href="#objectives" class="cta" aria-label="Explore Our Mission">Explore Our Mission</a>
@@ -183,90 +181,76 @@
 
     <!-- Objectives Section -->
     <section class="objectives" id="objectives">
-    <h2>Our Objectives</h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>Environmental Conservation</h3>
-            <p>To engage in the conservation, rehabilitation, or protection of the natural environment, including flora, fauna, and biosphere.</p>
+        <h2>Our Objectives</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Environmental Conservation</h3>
+                <p>To engage in the conservation, rehabilitation, or protection of the natural environment, including flora, fauna, and biosphere.</p>
+            </div>
+            <div class="card">
+                <h3>Animal Welfare</h3>
+                <p>To take care of animals, including rehabilitation and prevention of ill-treatment.</p>
+            </div>
+            <div class="card">
+                <h3>Education & Awareness</h3>
+                <p>To promote education and training programs on environmental awareness and sustainable development projects.</p>
+            </div>
+            <div class="card">
+                <h3>Alternate Energy</h3>
+                <p>To promote the use of alternate energy sources and reduce dependence on non-renewable resources.</p>
+            </div>
+            <div class="card">
+                <h3>Land Use Development</h3>
+                <p>To improve and protect various types of land use, suitable for sustainable development as per government policies.</p>
+            </div>
+            <div class="card">
+                <h3>Land Reform Programs</h3>
+                <p>To promote access to land, housing, and infrastructure, supporting official land reform programs.</p>
+            </div>
+            <div class="card">
+                <h3>National Parks</h3>
+                <p>To fund the acquisition of land for national parks, dedicated reserves, and protected areas.</p>
+            </div>
+            <div class="card">
+                <h3>Water Rehabilitation</h3>
+                <p>To fund the purchase of water entitlements for increasing environmental flows and restoring wetlands.</p>
+            </div>
+            <div class="card">
+                <h3>Organic Farming</h3>
+                <p>To promote and support organic farming practices, including the use of bio-fertilizers and composting.</p>
+            </div>
+            <div class="card">
+                <h3>Green Fuel</h3>
+                <p>To encourage the use of green fuel as an eco-friendly alternative.</p>
+            </div>
+            <div class="card">
+                <h3>Food Forest Development</h3>
+                <p>To promote and develop food forests for sustainable food systems.</p>
+            </div>
+            <div class="card">
+                <h3>Indigenous Crops</h3>
+                <p>To conserve and promote indigenous varieties of seeds and crops for biodiversity and food security.</p>
+            </div>
         </div>
-        <div class="card">
-            <h3>Animal Welfare</h3>
-            <p>To take care of animals, including rehabilitation and prevention of ill-treatment.</p>
-        </div>
-        <div class="card">
-            <h3>Education & Awareness</h3>
-            <p>To promote education and training programs on environmental awareness and sustainable development projects.</p>
-        </div>
-        <div class="card">
-            <h3>Alternate Energy</h3>
-            <p>To promote the use of alternate energy sources and reduce dependence on non-renewable resources.</p>
-        </div>
-        <div class="card">
-            <h3>Land Use Development</h3>
-            <p>To improve and protect various types of land use, suitable for sustainable development as per government policies.</p>
-        </div>
-        <div class="card">
-            <h3>Land Reform Programs</h3>
-            <p>To promote access to land, housing, and infrastructure, supporting official land reform programs.</p>
-        </div>
-        <div class="card">
-            <h3>National Parks</h3>
-            <p>To fund the acquisition of land for national parks, dedicated reserves, and protected areas.</p>
-        </div>
-        <div class="card">
-            <h3>Water Rehabilitation</h3>
-            <p>To fund the purchase of water entitlements for increasing environmental flows and restoring wetlands.</p>
-        </div>
-        <div class="card">
-            <h3>Organic Farming</h3>
-            <p>To promote and support organic farming practices, including the use of bio-fertilizers and composting.</p>
-        </div>
-        <div class="card">
-            <h3>Green Fuel</h3>
-            <p>To encourage the use of green fuel as an eco-friendly alternative.</p>
-        </div>
-        <div class="card">
-            <h3>Food Forest Development</h3>
-            <p>To promote and develop food forests for sustainable food systems.</p>
-        </div>
-        <div class="card">
-            <h3>Indigenous Crops</h3>
-            <p>To conserve and promote indigenous varieties of seeds and crops for biodiversity and food security.</p>
-        </div>
-    </div>
     </section>
 
     <!-- Donation Section -->
     <section class="donation-section">
-        <h2>Support Our Cause</h2>
-        <p>Your contributions will help fund our environmental, animal welfare, and sustainability projects. Together, we can create a better future.</p>
+    <h2>Support Our Cause</h2>
+    <p>Your contributions will help fund our environmental, animal welfare, and sustainability projects. Together, we can create a better future.</p>
+    <!-- Added more space between heading and button -->
+    <div style="margin-top: 30px;">
         <a href="https://donate-link.com" class="donate-btn" aria-label="Donate Now">Donate Now</a>
-    </section>
-
-    <!-- Social Media Section -->
-    <section id="social-media">
-        <h2>Connect with Us</h2>
-        <p>Stay inspired and informed by joining our growing community online.</p>
-        <div style="display: flex; justify-content: center; gap: 20px;">
-            <a href="https://facebook.com" target="_blank" aria-label="Follow us on Facebook">
-                <!-- Facebook Icon SVG -->
-            </a>
-            <a href="https://twitter.com" target="_blank" aria-label="Follow us on Twitter">
-                <!-- Twitter Icon SVG -->
-            </a>
-            <a href="https://instagram.com" target="_blank" aria-label="Follow us on Instagram">
-                <!-- Instagram Icon SVG -->
-            </a>
-        </div>
+    </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Bionectus. All Rights Reserved.</p>
-        <div>
-            <a href="privacy-policy.html" style="margin: 5px;">Privacy Policy</a>
-            <a href="terms-and-conditions.html" style="margin: 5px;">Terms and Conditions</a>
-            <a href="contact-us.html" style="margin: 5px;">Contact Us</a>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms and Conditions</a>
+            <a href="contact-us.html">Contact Us</a>
         </div>
     </footer>
 
