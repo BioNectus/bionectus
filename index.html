@@ -3,125 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bionectus - Restoring balance to ecosystems through innovation and education.">
-    <title>Bionectus</title>
+    <meta name="description" content="Bionectus - Empowering Nature and Sustainability">
+    <meta property="og:title" content="Bionectus - For a Greener Future">
+    <meta property="og:description" content="Empowering Nature and Sustainability for a Greener Future.">
+    <meta property="og:image" content="path-to-image.jpg">
+    <meta property="og:url" content="https://bionectus.com">
+    <meta property="og:type" content="website">
+    <title>Bionectus | For a Greener Future</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* General Styles */
+        * {
             margin: 0;
             padding: 0;
-            color: #333;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
         }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f0f0f0;
+            color: #333333;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Section */
         header {
-            background: linear-gradient(135deg, #3b8d99, #6b6b83);
-            color: white;
-            padding: 1.5em 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            background: linear-gradient(135deg, #1D2B64, #00B8B8); /* Replaced yellow with soft teal */
+            color: #ffffff;
+            position: relative;
+            padding: 50px;
         }
         header h1 {
-            margin: 0;
-            font-size: 2.5em;
+            font-size: 4rem;
+            background: linear-gradient(90deg, #9C27B0, #FF4081);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-transform: uppercase;
+            margin-bottom: 20px;
         }
         header p {
-            font-size: 1.2em;
+            font-size: 1.4rem;
+            max-width: 600px;
+            line-height: 1.5;
+            margin-bottom: 20px;
         }
-        nav {
-            display: flex;
+        header .cta {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            background: #FF4081;
+            border-radius: 50px;
+            color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        header .cta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Objectives Section */
+        .objectives {
+            padding: 80px 20px;
+            background: #ffffff;
+            text-align: center;
+        }
+        .objectives h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #1D2B64;
+            font-weight: 600;
+        }
+        .objectives .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             justify-content: center;
-            gap: 20px;
-            background-color: #2c3e50;
-            padding: 10px 0;
         }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1em;
+        .objectives .card {
+            background: #f7f7f7;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .objectives .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .objectives .card h3 {
+            font-size: 1.6rem;
+            color: #1D2B64;
+            margin-bottom: 15px;
+        }
+        .objectives .card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background: #2D2D2D;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        /* Social Media Section */
+        #social-media {
+            padding: 60px 20px;
+            background: #00B8B8; /* Soft teal color */
+            text-align: center;
+        }
+        #social-media h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        #social-media p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+        #social-media a {
+            color: #ffffff;
+            font-size: 1.8rem;
+            padding: 10px;
             transition: color 0.3s;
         }
-        nav a:hover {
-            color: #1abc9c;
-        }
-        .container {
-            padding: 2em;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .section {
-            margin-bottom: 2em;
-        }
-        .section h2 {
-            color: #3b8d99;
-            font-size: 2em;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #1abc9c;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .btn:hover {
-            background-color: #16a085;
-        }
-        .program {
-            background-color: white;
-            padding: 1.5em;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1em;
-        }
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 1.5em 0;
-        }
-        footer p {
-            margin: 0;
+        #social-media a:hover {
+            color: #FF4081;
         }
     </style>
 </head>
 <body>
+    <!-- Hero Section -->
     <header>
         <h1>Bionectus</h1>
-        <p>Conserving Earth's biodiversity through innovation and community engagement</p>
+        <p>Empowering Nature and Sustainability for a Greener Future</p>
+        <a href="#objectives" class="cta" aria-label="Explore Our Mission">Explore Our Mission</a>
     </header>
-    <nav>
-        <a href="#mission">Mission</a>
-        <a href="#programs">Programs</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div class="container">
-        <div id="mission" class="section">
-            <h2>Our Mission</h2>
-            <p>Bionectus is committed to restoring balance to ecosystems while promoting sustainable development and environmental education. We believe in innovation and active community engagement to achieve a harmonious world.</p>
+
+    <!-- Objectives Section -->
+    <section class="objectives" id="objectives">
+    <h2>Our Objectives</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Environmental Conservation</h3>
+            <p>To engage in the conservation, rehabilitation, or protection of the natural environment, including flora, fauna, and biosphere.</p>
         </div>
-        <div id="programs" class="section">
-            <h2>Our Programs</h2>
-            <div class="program">
-                <h3>1. Biodiversity Conservation</h3>
-                <p>We implement strategies to protect endangered species and preserve natural habitats.</p>
-            </div>
-            <div class="program">
-                <h3>2. Sustainable Development</h3>
-                <p>Our programs promote renewable energy, eco-friendly practices, and green urban planning.</p>
-            </div>
-            <div class="program">
-                <h3>3. Environmental Education</h3>
-                <p>We empower communities with knowledge and tools to care for the planet.</p>
-            </div>
+        <div class="card">
+            <h3>Animal Welfare</h3>
+            <p>To take care of animals, including rehabilitation and prevention of ill-treatment.</p>
         </div>
-        <div id="contact" class="section">
-            <h2>Contact Us</h2>
-            <p>If you'd like to get involved or learn more, reach out to us:</p>
-            <a href="mailto:info@bionectus.com" class="btn">Email Us</a>
+        <div class="card">
+            <h3>Education & Awareness</h3>
+            <p>To promote education and training programs on environmental awareness and sustainable development projects.</p>
+        </div>
+        <div class="card">
+            <h3>Alternate Energy</h3>
+            <p>To promote the use of alternate energy sources and reduce dependence on non-renewable resources.</p>
+        </div>
+        <div class="card">
+            <h3>Land Use Development</h3>
+            <p>To improve and protect various types of land use, suitable for sustainable development as per government policies.</p>
+        </div>
+        <div class="card">
+            <h3>Land Reform Programs</h3>
+            <p>To promote access to land, housing, and infrastructure, supporting official land reform programs.</p>
+        </div>
+        <div class="card">
+            <h3>National Parks</h3>
+            <p>To fund the acquisition of land for national parks, dedicated reserves, and protected areas.</p>
+        </div>
+        <div class="card">
+            <h3>Water Rehabilitation</h3>
+            <p>To fund the purchase of water entitlements for increasing environmental flows and restoring wetlands.</p>
+        </div>
+        <div class="card">
+            <h3>Organic Farming</h3>
+            <p>To promote and support organic farming practices, including the use of bio-fertilizers and composting.</p>
+        </div>
+        <div class="card">
+            <h3>Green Fuel</h3>
+            <p>To encourage the use of green fuel as an eco-friendly alternative.</p>
+        </div>
+        <div class="card">
+            <h3>Food Forest Development</h3>
+            <p>To promote and develop food forests for sustainable food systems.</p>
+        </div>
+        <div class="card">
+            <h3>Indigenous Crops</h3>
+            <p>To conserve and promote indigenous varieties of seeds and crops for biodiversity and food security.</p>
         </div>
     </div>
+<section id="social-media" style="text-align: center; padding: 20px;">
+    <h2>Connect with Us</h2>
+    <p>
+        Stay inspired and informed by joining our growing community online.
+        Follow us and take part in our journey towards sustainability!
+    </p>
+    <div style="display: flex; justify-content: center; gap: 20px; padding: 20px;">
+        <!-- Facebook -->
+        <a href="https://facebook.com" target="_blank" title="Follow us on Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.675 0h-21.35C.584 0 0 .584 0 1.305v21.389C0 23.416.584 24 1.305 24h11.495v-9.294H9.672v-3.622h3.128V8.407c0-3.1 1.893-4.785 4.656-4.785 1.325 0 2.463.099 2.794.143v3.24h-1.918c-1.504 0-1.796.715-1.796 1.763v2.311h3.587l-.467 3.622h-3.12V24h6.116c.72 0 1.305-.584 1.305-1.305V1.305C24 .584 23.416 0 22.675 0z"/>
+            </svg>
+        </a>
+
+        <!-- Twitter -->
+        <a href="https://twitter.com" target="_blank" title="Follow us on Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.954 4.569c-.885.392-1.83.656-2.825.775 1.014-.607 1.794-1.569 2.163-2.723-.949.555-2.005.959-3.127 1.184-.897-.959-2.173-1.558-3.594-1.558-2.725 0-4.93 2.206-4.93 4.93 0 .386.045.762.127 1.124-4.09-.205-7.719-2.165-10.148-5.144-.423.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.062c0 2.386 1.693 4.374 3.946 4.828-.413.112-.847.172-1.296.172-.315 0-.622-.03-.924-.086.622 1.953 2.432 3.377 4.576 3.418-1.675 1.313-3.778 2.1-6.065 2.1-.394 0-.779-.023-1.162-.067 2.162 1.389 4.729 2.199 7.5 2.199 9.054 0 14-7.496 14-13.986 0-.21 0-.423-.015-.633.961-.694 1.796-1.562 2.457-2.549z"/>
+            </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com" target="_blank" title="Follow us on Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0C8.742 0 8.333.014 7.052.072 5.775.129 4.89.325 4.146.636a5.918 5.918 0 0 0-2.13 1.401A5.917 5.917 0 0 0 .636 4.146C.325 4.89.129 5.775.072 7.052.014 8.333 0 8.742 0 12s.014 3.667.072 4.948c.057 1.277.253 2.162.564 2.906a5.921 5.921 0 0 0 1.402 2.13 5.919 5.919 0 0 0 2.13 1.402c.744.31 1.629.506 2.906.563 1.281.058 1.69.072 4.948.072s3.667-.014 4.948-.072c1.277-.057 2.162-.253 2.906-.563a5.921 5.921 0 0 0 2.13-1.402 5.921 5.921 0 0 0 1.401-2.13c.31-.744.506-1.629.563-2.906.058-1.281.072-1.69.072-4.948s-.014-3.667-.072-4.948c-.057-1.277-.253-2.162-.563-2.906a5.921 5.921 0 0 0-1.402-2.13 5.918 5.918 0 0 0-2.13-1.401C17.162.325 16.277.129 15 .072 13.719.014 13.31 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm6.406-1.558a1.443 1.443 0 1 0 0 2.885 1.443 1.443 0 0 0 0-2.885zM12 7.274a4.729 4.729 0 1 1 0 9.458 4.729 4.729 0 0 1 0-9.458z"/>
+            </svg>
+        </a>
+    </div>
+</section>
+
     <footer>
-        <p>© 2024 Bionectus. All Rights Reserved.</p>
+        &copy; 2024 Bionectus Trust | All Rights Reserved
     </footer>
+
+    <!-- GSAP Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.from("header h1", { opacity: 0, y: -50, duration: 1 });
+        gsap.from("header p", { opacity: 0, y: 50, duration: 1, delay: 0.5 });
+        gsap.from("header .cta", { opacity: 0, scale: 0.8, duration: 1, delay: 1 });
+
+        gsap.utils.toArray(".card").forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                },
+                opacity: 0,
+                y: 50,
+                duration: 0.8,
+                delay: i * 0.2,
+            });
+        });
+    </script>
 </body>
 </html>
