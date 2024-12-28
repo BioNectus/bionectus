@@ -10,7 +10,8 @@
     <meta property="og:url" content="https://bionectus.com">
     <meta property="og:type" content="website">
     <title>Bionectus | For a Greener Future</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* General Styles */
         * {
@@ -19,9 +20,9 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Montserrat', sans-serif;
-            background: #f0f0f0;
-            color: #333333;
+            font-family: 'Poppins', sans-serif;
+            background: #0A192F; /* Deep navy background */
+            color: #FFFFFF;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
@@ -56,43 +57,49 @@
         }
 
         header h1 {
-            font-size: 4rem;
-            background: linear-gradient(90deg, #8A2BE2, #00BFFF); /* Gradient from Magenta (Purple) to Blue */
+            font-size: 5rem;
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(90deg, #FFD700, #FFA500); /* Gold gradient */
             -webkit-background-clip: text;
             color: transparent;
             text-transform: uppercase;
             margin-bottom: 20px;
+            animation: float 3s infinite ease-in-out;
         }
         header p {
             font-size: 1.4rem;
             max-width: 600px;
             line-height: 1.5;
             margin-bottom: 20px;
+            color: #CCCCCC;
+            animation: fadeIn 2s ease-out;
         }
         header .cta {
             padding: 15px 40px;
             font-size: 1.2rem;
-            background: linear-gradient(90deg, #8A2BE2, #00BFFF); /* Gradient button color */
+            background: linear-gradient(90deg, #FFD700, #FFA500); /* Gold gradient */
             border-radius: 50px;
-            color: #fff;
+            color: #0A192F; /* Dark navy text */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: pulse 2s infinite;
         }
         header .cta:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 10px 30px rgba(255, 215, 0, 0.3);
         }
 
         /* Objectives Section */
         .objectives {
-            padding: 80px 20px;
-            background: #ffffff;
+            padding: 100px 20px;
+            background: #0A192F; /* Deep navy background */
             text-align: center;
         }
         .objectives h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #1D2B64;
-            font-weight: 600;
+            font-size: 3rem;
+            margin-bottom: 50px;
+            color: #FFD700; /* Gold accent */
+            font-family: 'Cormorant Garamond', serif;
+            animation: fadeIn 2s ease-out;
         }
         .objectives .card-container {
             display: grid;
@@ -101,32 +108,65 @@
             justify-content: center;
         }
         .card {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background-color: #112240; /* Dark card background */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card h3 {
-            color: #1D2B64;
+            color: #FFD700; /* Gold accent */
             margin-bottom: 15px;
             font-size: 1.8rem;
+            font-family: 'Cormorant Garamond', serif;
         }
         .card p {
             font-size: 1.1rem;
-            color: #555;
+            color: #CCCCCC;
             line-height: 1.6;
         }
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Donation Section */
+        .donation-section {
+            padding: 100px 20px;
+            background: linear-gradient(90deg, #FFD700, #FFA500); /* Gold gradient */
+            color: #0A192F; /* Dark navy text */
+            text-align: center;
+        }
+        .donation-section h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-family: 'Cormorant Garamond', serif;
+            animation: fadeIn 2s ease-out;
+        }
+        .donation-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeIn 2.5s ease-out;
+        }
+        .donate-btn {
+            padding: 15px 40px;
+            background-color: #0A192F; /* Dark navy background */
+            border-radius: 50px;
+            color: #FFD700; /* Gold accent */
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        .donate-btn:hover {
+            background-color: #112240; /* Darker navy */
+            transform: scale(1.05);
         }
 
         /* Footer Section */
         footer {
-            background-color: #333333;
+            background-color: #0A192F; /* Deep navy background */
             color: #ffffff;
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
             font-size: 1rem;
             margin-top: 50px;
@@ -135,35 +175,50 @@
             margin-bottom: 10px;
         }
         footer a {
-            color: #ffffff;
+            color: #FFD700; /* Gold accent */
             font-weight: bold;
             margin: 5px;
             transition: color 0.3s ease;
         }
         footer a:hover {
-            color: #8A2BE2; /* Magenta hover effect */
+            color: #FFA500; /* Orange hover effect */
         }
         footer .footer-links {
             margin-top: 20px;
         }
 
-        /* Donation Section */
-        .donation-section {
-            padding: 80px 20px;
-            background: linear-gradient(90deg, #8A2BE2, #00BFFF); /* Gradient background */
-            color: #fff;
-            text-align: center;
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .donate-btn {
-            padding: 15px 40px;
-            background-color: #00BFFF;
-            border-radius: 50px;
-            color: white;
-            font-size: 1.2rem;
-            transition: background-color 0.3s ease;
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
         }
-        .donate-btn:hover {
-            background-color: #8A2BE2; /* Magenta hover effect */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
     </style>
 </head>
@@ -236,12 +291,11 @@
 
     <!-- Donation Section -->
     <section class="donation-section">
-    <h2>Support Our Cause</h2>
-    <p>Your contributions will help fund our environmental, animal welfare, and sustainability projects. Together, we can create a better future.</p>
-    <!-- Added more space between heading and button -->
-    <div style="margin-top: 30px;">
-        <a href="https://donate-link.com" class="donate-btn" aria-label="Donate Now">Donate Now</a>
-    </div>
+        <h2>Support Our Cause</h2>
+        <p>Your contributions will help fund our environmental, animal welfare, and sustainability projects. Together, we can create a better future.</p>
+        <div style="margin-top: 30px;">
+            <a href="https://donate-link.com" class="donate-btn" aria-label="Donate Now">Donate Now</a>
+        </div>
     </section>
 
     <!-- Footer -->
