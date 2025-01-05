@@ -220,52 +220,6 @@
                 transform: scale(1);
             }
         }
-
-        /* Chatbot Styles */
-        #chatbot-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 300px;
-            background: #112240; /* Dark card background */
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            font-family: 'Poppins', sans-serif;
-            z-index: 1000;
-        }
-        #chatbot-header {
-            padding: 10px;
-            background: #0A192F; /* Deep navy background */
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            color: #FFD700; /* Gold accent */
-            font-weight: bold;
-            text-align: center;
-        }
-        #chatbot-body {
-            height: 200px;
-            overflow-y: auto;
-            padding: 10px;
-            color: #CCCCCC;
-        }
-        #chatbot-input {
-            padding: 10px;
-            display: flex;
-            gap: 10px;
-        }
-        #chatbot-message {
-            flex: 1;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #CCCCCC;
-        }
-        #chatbot-send {
-            padding: 5px 10px;
-            background: #FFD700; /* Gold accent */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
@@ -354,60 +308,8 @@
         </div>
     </footer>
 
-    <!-- Chatbot Container -->
-    <div id="chatbot-container">
-        <div id="chatbot-header">Chat with Us</div>
-        <div id="chatbot-body"></div>
-        <div id="chatbot-input">
-            <input type="text" id="chatbot-message" placeholder="Type your message...">
-            <button id="chatbot-send">Send</button>
-        </div>
-    </div>
-
-    <!-- Chatbot Script -->
-    <script>
-        // Chatbot configuration from the JSON file
-        const chatbotConfig = {
-            botId: "67ebf59c-5c3c-4acb-8b2e-a5500a582dd5",
-            configuration: {
-                website: {},
-                email: {},
-                phone: {},
-                termsOfService: {},
-                privacyPolicy: {},
-                color: "#3B82F6",
-                variant: "solid",
-                themeMode: "light",
-                fontFamily: "inter",
-                radius: 1
-            },
-            clientId: "31f716b4-b1f7-48cb-ae94-9e69e691ec8e"
-        };
-
-        // Function to send a message
-        function sendMessage() {
-            const message = document.getElementById('chatbot-message').value.trim();
-            if (!message) return;
-
-            // Display user message
-            const chatbotBody = document.getElementById('chatbot-body');
-            chatbotBody.innerHTML += `<div style="text-align: right; margin-bottom: 5px;">You: ${message}</div>`;
-            document.getElementById('chatbot-message').value = ''; // Clear input
-
-            // Simulate chatbot response (replace with actual API call)
-            setTimeout(() => {
-                chatbotBody.innerHTML += `<div style="text-align: left; margin-bottom: 5px;">Bot: Hello! How can I assist you today?</div>`;
-                chatbotBody.scrollTop = chatbotBody.scrollHeight; // Scroll to bottom
-            }, 1000);
-        }
-
-        // Add event listener for send button
-        document.getElementById('chatbot-send').addEventListener('click', sendMessage);
-
-        // Add event listener for Enter key
-        document.getElementById('chatbot-message').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') sendMessage();
-        });
-    </script>
+    <!-- Botpress Web Chat -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/01/05/08/20250105081711-0ACFGXJ8.js"></script>
 </body>
 </html>
